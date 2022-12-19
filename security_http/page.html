@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button class="alert">АХТУНГ</button>
+    <button class="cancel">ОТМЕНА</button>
+</body>
+<script>
+    let alert = document.querySelector(".alert");
+    let cancel = document.querySelector(".cancel");
+    alert.addEventListener(
+        "click",
+        async () => {
+            await fetch("/alert");
+        }
+    );
+    cancel.addEventListener(
+        "click",
+        async () => {
+            await fetch("/cancel");
+        }
+    );
+</script>
+</html>
